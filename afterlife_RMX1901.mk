@@ -4,12 +4,23 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Evolution X stuff
+# Inherit some common AterLife stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 EXTRA_UDFPS_ANIMATIONS := true
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGING := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
 TARGET_BUILD_APERTURE_CAMERA := true
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+ 
+ # Maintainer Flag
+ AFTERLIFE_MAINTAINER := м∂_ιѕяαƒιℓ
+ 
+ # CoreGapps
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
+AFTERLIFE_EXTRA := true
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -20,7 +31,7 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := evolution_RMX1901
+PRODUCT_NAME := afterlife_RMX1901
 PRODUCT_MODEL := RMX1901
 
 PRODUCT_SYSTEM_NAME := RMX1901
