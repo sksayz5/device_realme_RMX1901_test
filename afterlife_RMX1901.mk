@@ -10,6 +10,7 @@ EXTRA_UDFPS_ANIMATIONS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 USE_PIXEL_CHARGING := true
 TARGET_SUPPORTS_TOUCHGESTURES := true
+TARGET_SUPPORTS_BLUR := true
 TARGET_BUILD_APERTURE_CAMERA := true
 
 $(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
