@@ -496,10 +496,6 @@ PRODUCT_PACKAGES += \
     vndk_package \
     com.android.vndk.current.on_vendor
 
-# Wallet
-PRODUCT_PACKAGES += \
-    QuickAccessWallet
-
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
     libnl \
