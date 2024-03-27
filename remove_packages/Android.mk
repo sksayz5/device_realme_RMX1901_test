@@ -23,7 +23,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 		ScribePrebuilt \
 		Showcase \
 		Tycho \
-		Papers \
+		arcore \
 		Videos \
 		PixelLiveWallpaperPrebuilt \
 		talkback \
@@ -31,8 +31,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 		FM2 \
 		NfcNci \
 		ViMusic \
-		AndroidAutoStubPrebuilt \
-		Papers
+		AndroidAutoStubPrebuilt
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
