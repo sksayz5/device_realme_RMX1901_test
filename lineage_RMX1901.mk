@@ -4,14 +4,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Crdroid OS stuff
+# Inherit some common  AlphaDroid stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_BLUR := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Others Flag
+WITH_GMS := true
+ALPHA_MAINTAINER := м∂_ιѕяαƒιℓ
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
