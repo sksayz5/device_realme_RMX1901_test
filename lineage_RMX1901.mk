@@ -11,8 +11,19 @@ TARGET_SUPPORTS_QUICK_TAP := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Others Flag
-WITH_GMS := true
 ALPHA_MAINTAINER := м∂_ιѕяαƒιℓ
+
+# TARGET_BUILD_PACKAGE options:
+# 1 - vanilla (default)
+# 2 - microg
+# 3 - gapps
+TARGET_BUILD_PACKAGE := 3
+
+# TARGET_LAUNCHER options:
+# 1 - stock (default)
+# 2 - lawnchair
+# 3 - pixel (valid only on gapps builds)
+TARGET_LAUNCHER := 1
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
