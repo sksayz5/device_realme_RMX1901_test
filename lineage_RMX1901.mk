@@ -4,23 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Project Matrixx stuff
+# Inherit some common Evolution X stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_MINI_GAPPS:= true
+TARGET_DISABLE_EPPE := true
+
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Matrixx
-MATRIXX_MAINTAINER := м∂_ιѕяαƒιℓ
-MATRIXX_CHIPSET := SDM710
-MATRIXX_BATTERY := 3765mah
-MATRIXX_DISPLAY := 1080x2340
-
-# Gapps
-WITH_GMS := true
-BUILD_GOOGLE_CONTACTS := true
-BUILD_GOOGLE_DIALER := true
-BUILD_GOOGLE_MESSAGE := true
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -28,8 +21,6 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Viper
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-# Sign builds
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/.android-certs/releasekey
 
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
