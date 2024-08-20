@@ -4,15 +4,20 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common DerpFest stuff
+# Inherit some common Droidx stuff
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DISABLE_EPPE := true
+DROIDX_GAPPS := true
 TARGET_NOT_USES_BLUR := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_SUPPORTS_QUICK_TAP := true
-EXTRA_UDFPS_ICONS := true
+EXTRA_UDFPS_ANIMATIONS := true
 
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ro.droidx.maintainer= SHRAVAN
+ro.droidx.chipset=Snapdragon 712
+ro.droidx.display_resolution=6.53" AMOLED 2340x1080
+
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
 
 # Inherit from RMX1901 device
@@ -25,7 +30,7 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := derp_RMX1901
+PRODUCT_NAME := droidx_RMX1901
 PRODUCT_MODEL := RMX1901
 
 PRODUCT_SYSTEM_NAME := RMX1901
