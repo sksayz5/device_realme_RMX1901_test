@@ -4,29 +4,41 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Evolution X stuff
+# Inherit some common Rising stuff
+
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USES_MINI_GAPPS:= true
-TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+
+# RisingOS Flags
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+RISING_CHIPSET := Snapdragon 710
+WITH_GMS := true
+TARGET_CORE_GMS := true
+
+# Maintainer Flag
+RISING_MAINTAINER := SHRAVAN
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 710" \
+    RISING_MAINTAINER="SHRAVAN"
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Viper
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := realme
 PRODUCT_NAME := lineage_RMX1901
-PRODUCT_MODEL := RMX1901
+PRODUCT_MODEL := Realme X
 
 PRODUCT_SYSTEM_NAME := RMX1901
 PRODUCT_SYSTEM_DEVICE := RMX1901
