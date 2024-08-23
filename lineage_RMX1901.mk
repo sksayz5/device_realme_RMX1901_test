@@ -4,25 +4,23 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Rising stuff
-
+# Inherit some common Project Matrixx stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_ENABLE_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
 
-# RisingOS Flags
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-RISING_CHIPSET := Snapdragon 710
+
+# Matrixx
+MATRIXX_MAINTAINER := ShRaVaN
+MATRIXX_CHIPSET := SDM710
+MATRIXX_BATTERY := 3765mah
+MATRIXX_DISPLAY := 1080x2340
+
+# Gapps
 WITH_GMS := true
-TARGET_CORE_GMS := true
-
-# Maintainer Flag
-RISING_MAINTAINER := SHRAVAN
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="Snapdragon 710" \
-    RISING_MAINTAINER="SHRAVAN"
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
