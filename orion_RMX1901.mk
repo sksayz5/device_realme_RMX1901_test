@@ -4,38 +4,29 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Project Matrixx stuff
+# Inherit some common Orion OS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-
-# Matrixx
-MATRIXX_MAINTAINER := ShRaVaN
-MATRIXX_CHIPSET := SDM710
-MATRIXX_BATTERY := 3765mah
-MATRIXX_DISPLAY := 1080x2340
-
-# Gapps
-WITH_GMS := true
+# OrionOS Flags
+ORION_MAINTAINER := Shravan
+ORION_MAINTAINER_LINK := https://t.me/shrav_1
+ORION_GAPPS := true
 BUILD_GOOGLE_CONTACTS := true
 BUILD_GOOGLE_DIALER := true
 BUILD_GOOGLE_MESSAGE := true
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from RMX1901 device
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Viper
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-# Inherit from RMX1901 device
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-
-
-
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := lineage_RMX1901
+PRODUCT_NAME := orion_RMX1901
 PRODUCT_MODEL := Realme X
 
 PRODUCT_SYSTEM_NAME := RMX1901
