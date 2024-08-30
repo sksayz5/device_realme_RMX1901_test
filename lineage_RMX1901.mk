@@ -12,7 +12,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 WITH_GMS := true
 TARGET_DISABLE_EPPE := true
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 
 # Inherit from RMX1901 device
