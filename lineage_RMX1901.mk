@@ -9,11 +9,17 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-WITH_GMS := true
 TARGET_DISABLE_EPPE := true
+# Maintainer
+EVEREST_MAINTAINER := Shravan
 
-$(call inherit-product, vendor/lineage/config/common.mk)
+# Everest Flags
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
