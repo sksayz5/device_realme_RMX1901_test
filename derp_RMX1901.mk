@@ -21,8 +21,6 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Viper
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-# Sign builds
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/derp/signing/keys/releasekey 
 
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
