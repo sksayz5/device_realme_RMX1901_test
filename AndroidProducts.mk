@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/euclid_RMX1901.mk
+    $(LOCAL_DIR)/lineage_RMX1901.mk
 
 COMMON_LUNCH_CHOICES := \
-    euclid_RMX1901-userdebug \
-    euclid_RMX1901-eng
+    lineage_RMX1901-userdebug \
+    lineage_RMX1901-eng
